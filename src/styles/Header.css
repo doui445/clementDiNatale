@@ -1,0 +1,57 @@
+/*===============================HEADER===============================*/
+#header-container {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(190, 190, 190, 0.9);
+    transition: transform 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+} #header {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+} #header-container.hidden {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+/*---------------LOGO----------------*/
+.header-logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 2% 5%;
+} .header-logo-container a {
+    width: 100%;
+    height: 100%;
+    padding-top: 18px;
+} .header-logo {
+    width: 10em;
+}
+/*---------------MENU----------------*/
+.header-menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} .header-menu {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    justify-content: space-between;
+} .header-menu a {
+    color: white;
+    background-color: transparent;
+    transition: all .5s ease-out;
+} .header-menu a:hover, .header-menu a:focus {
+    color: rgba(190, 190, 190, 0.9);
+    background-color: white;
+} .menu-item {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2% 4%;
+    border-radius: 10px;
+}

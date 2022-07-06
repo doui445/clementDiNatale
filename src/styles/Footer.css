@@ -1,0 +1,58 @@
+/*===============================FOOTER===============================*/
+#footer-container {
+    width: 100%;
+} #footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(190, 190, 190, 0.9);
+    color: rgb(30, 30, 30);
+}
+/*---------------LOGO----------------*/
+.footer-logo {
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+}
+/*-------------CONTACTS--------------*/
+.footer-contacts {
+    padding: 2% 10%;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+} .footer-contacts-title {
+    text-align: center;
+} .footer-contacts-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+} .footer-contacts-text div {
+    padding-bottom: 2%;
+} .networks {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+} .networks-logo {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+/*---------------SPEC----------------*/
+.footer-specialties {
+    padding: 2% 10%;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+} .footer-spacialties-title {
+    text-align: center;
+} .footer-specialties-text {
+    display: flex;
+    margin-top: -3%;
+    flex-direction: column;
+    text-align: justify;
+} .footer-specialties-text li {
+    padding-bottom: 1%;
+    padding: 0;
+    justify-content: center;
+    list-style: circle;
+}

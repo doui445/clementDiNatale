@@ -1,0 +1,25 @@
+/*==============================CLOSE UP==============================*/
+#closeup {
+    display: flex;
+    flex-direction: column;
+}
+/*---------------IMAGES----------------*/
+.closeup-images {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+} .closeup-image {
+    object-fit: cover;
+    height: 20em;
+    width: 100%;
+}
+/*---------------TEXT----------------*/
+.closeup-title-container {
+    display: flex;
+    padding: 2.5% 0% 0.5% 0%;
+    justify-content: center;
+} .closeup-description-container {
+    display: flex;
+    padding: 0.5% 5% 5% 5%;
+    text-align: justify;
+}

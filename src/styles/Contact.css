@@ -1,0 +1,43 @@
+/*================================FORM================================*/
+#contact-container {
+    background-color: rgb(30, 30, 30);
+    padding: 5%;
+} #contact {
+    display: flex;
+    flex-direction: column;
+}
+/*---------------TEXT----------------*/
+.contact-title-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .contact-description {
+    padding: 0 5% 5% 5%;
+    text-align: justify;
+}
+/*---------------FORM----------------*/
+.contact-formulaire {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact-formulaire input {
+    width: 45%;
+    line-height: 250%;
+} .contact-formulaire input, .contact-formulaire textarea {
+    background-color: rgba(30, 30, 30, 0);
+    color: white;
+    margin: 0 2% 2% 2%;
+    border-color: transparent;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+} .contact-formulaire textarea {
+    width: 95%;
+} .contact-formulaire button {
+    background-color: rgba(30, 30, 30, 0);
+    color: white;
+    margin: 1% 2% -1% 2%;
+    border-color: white;
+    border-width: 1px;
+    width: 96%;
+}

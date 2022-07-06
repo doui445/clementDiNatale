@@ -1,0 +1,12 @@
+#gallery-container {
+    width: 100%;
+    background: linear-gradient(to top, rgb(30, 30, 30) (100% - 50px), white (100% - 50px));
+    margin-top: -50px;
+    padding-top: 50px;
+} #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} .gallery-image {
+    height: 10em;
+}

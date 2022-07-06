@@ -1,0 +1,21 @@
+/*=================================BIO================================*/
+#bio-container {
+    background: linear-gradient(to bottom, rgb(30, 30, 30) 50px, white 50px);
+    color: rgb(30, 30, 30);
+    margin-top: -50px;
+    padding-top: 50px;
+} #bio {
+    display: flex;
+    padding: 0;
+} .bio-image {
+    width: 35%;
+    object-fit: cover;
+} .bio-text-container {
+    align-content: center;
+    padding: 8%;
+} .bio-title {
+    text-align: center;
+} .bio-text {
+    padding: 2%;
+    text-align: justify;
+}
