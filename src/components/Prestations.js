@@ -1,23 +1,42 @@
 import '../styles/Prestations.css'
 import prestimg from '../assets/prestation.JPG'
 
+function Text() {
+    return(
+        <div>
+            En passant par un cocktail dînatoire, un séminaire ou encore un team building, les prestations de Clément sont personnalisables sur-mesure afin d'avoir l'événement qui vous convient.
+            La magie est un réel atout qui permettra de rendre votre événement professionnel « marquant » tout en ajoutant une touche de divertissement grâce a la magie.
+        </div>
+    )
+}
+
 function Prestations() {
 
-    /*
-        let prestaButton = document.querySelector(".button")
-    prestaButton.addEventListener("click", () => {
-        switch (prestaButton.value) {
-            case 'cocktail/repas' :
-                console.log('11111111');
-                break;
-            case 'congrès/séminaire' :
-                console.log('22222222');
-                break;
-            default :
-                console.log('33333');
-        }
-    });
-    */
+    let Text1 = "Moment important de votre événement ou vos invités vont se détendre et discuter.<br /><br />Voici la formule close up (magie de proximité) qui laissera un souvenir inoubliable à vos invités. Clément évolue de groupe en groupe ou de table en table avec des tours modernes et percutants, directement dans les mains de vos invités.<br /><br />Un mélange entre magie et mentalisme avec une touche d'humour qui divertira l'ensemble de vos invités. (Les tours peuvent être personnalisables pour coller avec votre événement).";
+    let Text2 = "Le moment important de l'année ou l'ensemble de vos collaborateurs seront réunis, alors pourquoi pas leur donner un moment magique ?<br /><br />Voici la formule close up (magie de proximité) qui laissera un souvenir inoubliable à vos invités. Clément évolue de groupe en groupe ou de table en table avec des tours modernes et percutants, directement dans les mains de vos invités.<br /><br />Un mélange entre magie et mentalisme avec une touche d'humour qui divertira l'ensemble de vos invités. (Les tours peuvent être personnalisables pour coller avec votre événement).";
+    let Text3 = "Solution originale pour resserrer les liens de votre équipe, le team building avec une touche de magie semble être le bon choix !<br /><br />Des ateliers permettant de développer la créativité, la parole et la confiance en soi de votre équipe tout en leur donnant un moment de divertissement, Clément leur apprendra les bases de la magie et les feront travailler en équipe.";
+
+    function handleClick1(e) {
+        e.preventDefault();
+        document.getElementById("button1").className = "button active";
+        document.getElementById("button2").className = "button";
+        document.getElementById("button3").className = "button";
+        document.querySelector(".prestations-description-text").innerHTML=Text1;
+    }
+    function handleClick2(e) {
+        e.preventDefault();
+        document.getElementById("button1").className = "button";
+        document.getElementById("button2").className = "button active";
+        document.getElementById("button3").className = "button";
+        document.querySelector(".prestations-description-text").innerHTML=Text2;
+    }
+    function handleClick3(e) {
+        e.preventDefault();
+        document.getElementById("button1").className = "button";
+        document.getElementById("button2").className = "button";
+        document.getElementById("button3").className = "button active";
+        document.querySelector(".prestations-description-text").innerHTML=Text3;
+    }
 
     return (
         <section id='prestations-container'>
@@ -50,10 +69,7 @@ function Prestations() {
                         <div className='text-image-container'>
                             <div className='text-container'>
                                 <div className='prestations-description-text'>
-                                    Du cocktail dinatoire au team building en passant par une conférence spectacle, les prestations de Ben sont personnalisables.
-                                    Pour divertir vos collaborateurs, fidéliser vos clients ou fédérer votre équipe ? La magie est un réel outil.
-                                    Ben travaillera avec votre équipe pour rendre votre événement professionnel « marquant ».
-                                    Utiliser la magie comme vecteur de communication : faites le pari original, novateur et marquant pour vos invités.
+                                    <Text />
                                 </div>
                             </div>
                             <div className='image-container'>
@@ -62,10 +78,9 @@ function Prestations() {
                         </div>
                         <div className='buttons-container'>
                             <div className='more-buttons-container'>
-                                <button className='button active' /*onClick={() => document.querySelector("prestations-description-text").innerHTML="ouabfobapm"}*/>cocktail/repas</button>
-                                <button className='button'>congrès/séminaire</button>
-                                <button className='button'>team building</button>
-                                <button className='button'>conférence</button>
+                                <button id='button1' onClick={handleClick1} className='button'>cocktail/repas</button>
+                                <button id='button2' onClick={handleClick2} className='button'>congrès/séminaire</button>
+                                <button id='button3' onClick={handleClick3} className='button'>team building</button>
                             </div>
                             <a href='#contact-container' className='devis-button-container'>
                                 <button className='devis-button'>Obtenir un devis</button>
