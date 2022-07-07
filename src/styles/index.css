@@ -1,6 +1,8 @@
 /*===============================PAGE===============================*/
 body {
     margin: 0;
+    padding: 0;
+    border: none;
     background: rgb(30, 30, 30);
     font-weight: normal;
 	color: white;
@@ -14,10 +16,16 @@ body {
     monospace;
 } #main_wrapper {
     background-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
 } .display {
     display: flex;
     flex-direction: column;
     align-content: stretch;
+    margin: 0;
+    padding: 0;
+    border: none;
 } ul {
     list-style-type: none;
 } a {
