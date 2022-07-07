@@ -1,4 +1,5 @@
 import React from "react";
+//import {send} from "emailjs-com";
 
 class ContactFormulaire extends React.Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class ContactFormulaire extends React.Component {
         event.preventDefault();
         const data = JSON.stringify(this.state);
         console.log(data);
+        /*send()*/
         alert('Le formulaire à bien été envoyé');
         this.setState({
             name: '',
@@ -48,6 +50,7 @@ class ContactFormulaire extends React.Component {
                     value={this.state.name} 
                     onChange={this.handleChange} 
                     placeholder="NOM PRENOM" 
+                    required
                 />
                 <input 
                     type="text" 
@@ -62,6 +65,7 @@ class ContactFormulaire extends React.Component {
                     value={this.state.mail} 
                     onChange={this.handleChange} 
                     placeholder="EMAIL" 
+                    required
                 />
                 <input 
                     type="tel" 
@@ -76,6 +80,7 @@ class ContactFormulaire extends React.Component {
                     value={this.state.message} 
                     onChange={this.handleChange} 
                     placeholder="VOTRE MESSAGE" 
+                    required
                 ></textarea>
                 <button type="submit" value='Envoyer'>Envoyer</button>
             </form>
