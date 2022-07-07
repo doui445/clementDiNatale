@@ -1,4 +1,5 @@
 import '../styles/Contact.css'
+import ContactFormulaire from './ContactFormulaire';
 
 function Contact() {
     return (
@@ -14,14 +15,9 @@ function Contact() {
                         </p>
                     </div>
                 </div>
-                <form className='contact-formulaire' method='post' action='traitement.js'>
-                    <input type="text" name="name" placeholder="NOM PRÉNOM" />
-                    <input type="text" name="societe" placeholder="SOCIÉTE" />
-                    <input type="email" name="mail" placeholder="EMAIL" />
-                    <input type="tel" name="tel" placeholder="TÉLÉPHONE" />
-                    <textarea name="message" cols="100" rows="2" placeholder="VOTRE MESSAGE"></textarea>
-                    <button type='submit' className='btn btn-primary'>Envoyer</button>
-                </form>
+                <div className='contact-formulaire-container'>
+                    <ContactFormulaire />
+                </div>
             </div>
         </section>
     )
