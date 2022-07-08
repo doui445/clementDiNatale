@@ -51,7 +51,7 @@ function Prestations() {
                         <div className='prestations-intro-description-container'>
                             <div className='prestation-intro-description'>
                                 Cliquez sur le type de prestation qui vous intéresse ! <br />
-                                Et si vous ne trouvez pas votre bonheur ? <a href="#Form-container">Cliquez-ici.</a>
+                                Et si vous ne trouvez pas votre bonheur ? <a href="#contact-container">Cliquez-ici.</a>
                             </div>
                         </div>
                     </div>

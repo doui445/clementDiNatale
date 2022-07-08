@@ -1,6 +1,7 @@
 /*===============================FOOTER===============================*/
 #footer-container {
-    width: 100%;
+    padding: 0;
+    margin: 0;
 } #footer {
     display: flex;
     justify-content: space-around;
@@ -14,9 +15,11 @@
     width: 20em;
 }
 /*-------------CONTACTS--------------*/
-.footer-contacts {
+.footer-contacts-container {
+    padding: 0;
+    margin: 0;
+} .footer-contacts {
     padding: 2% 10%;
-    width: max-content;
     display: flex;
     flex-direction: column;
 } .footer-contacts-title {
@@ -51,8 +54,35 @@
     flex-direction: column;
     text-align: justify;
 } .footer-specialties-text li {
-    padding-bottom: 1%;
     padding: 0;
+    padding-bottom: 1%;
     justify-content: center;
     list-style: circle;
+}
+
+/*===============================SMALLSCREEN===============================*/
+@media all and (max-width: 1024px) {
+    #footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    /*---------------LOGO----------------*/
+    .footer-logo {
+        margin-top: -2em;
+        margin-bottom: -4.5em;
+    }
+    /*-------------CONTACTS--------------*/
+    .footer-contacts {
+        padding: 0;
+    } .footer-contacts-title {
+        text-align: center;
+    } .footer-contacts-text div {
+        padding-bottom: 0;
+    }
+    /*---------------SPEC----------------*/
+    .footer-specialties {
+        padding: 0;
+    }
 }

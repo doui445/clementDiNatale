@@ -10,3 +10,13 @@
 } .gallery-image {
     height: 10em;
 }
+
+/*===============================SMALLSCREEN===============================*/
+@media all and (max-width: 1024px) {
+    #gallery {
+        flex-wrap: nowrap;
+        overflow: scroll;
+    } .gallery-image {
+        padding: 1%;
+    }
+}
