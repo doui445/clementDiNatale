@@ -72,8 +72,9 @@
     } .banner-logo-container {
         margin-top: 100px;
         height: 20em;
+        width: 100%;
     } .banner-logo {
-        width: 25em;
+        width: 100%;
         z-index: 99;
     }
 }

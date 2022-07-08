@@ -30,4 +30,9 @@
     .closeup-image {
         height: 10em;
     }
+} @media all and (max-width: 980px) {
+    /*---------------IMAGES----------------*/
+    .closeup-image {
+        height: 5em;
+    }
 }

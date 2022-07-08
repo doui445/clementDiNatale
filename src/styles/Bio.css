@@ -31,7 +31,15 @@
         opacity: .2;
     } .bio-text-container {
         position: absolute;
+        height: 50rem;
     } .bio-title {
         padding-top: 50px;
+    } .bio-text {
+        overflow: scroll;
+        height: 80%;
+    }
+} @media all and (max-width: 980px) {
+    .bio-text-container {
+        height: 25rem;
     }
 }
