@@ -1,14 +1,14 @@
 import React from "react";
-//import {send} from "emailjs-com";
+import {send} from "emailjs-com";
 
 class ContactFormulaire extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            society: '',
-            mail: '',
-            phone: '',
+            user_name: '',
+            user_society: '',
+            user_email: '',
+            user_phone: '',
             message: ''
         };
 
@@ -26,19 +26,31 @@ class ContactFormulaire extends React.Component {
         });
     }
 
+
+
     handleSubmit(event) {
         event.preventDefault();
-        const data = JSON.stringify(this.state);
-        console.log(data);
-        /*send()*/
-        alert('Le formulaire à bien été envoyé');
-        this.setState({
-            name: '',
-            society: '',
-            mail: '',
-            phone: '',
-            message: ''
-        });
+        //const data = JSON.stringify(this.state);
+        //console.log(data);
+        send(
+            'service_qs7w3oy',
+            'contact_form',
+            this.state,
+            'OWcszzCJiUtLl7Fox'
+        )
+            .then(() => {
+                alert('Le formulaire à bien été envoyé');
+                this.setState({
+                    user_name: '',
+                    user_society: '',
+                    user_email: '',
+                    user_phone: '',
+                    message: ''
+                });
+            })
+            .catch((err) => {
+                alert('FAILED...', err);
+            });
     }
 
     render() {
@@ -46,31 +58,31 @@ class ContactFormulaire extends React.Component {
             <form onSubmit={this.handleSubmit} className='contact-formulaire'>
                 <input 
                     type="text" 
-                    name="name" 
-                    value={this.state.name} 
+                    name="user_name" 
+                    value={this.state.user_name} 
                     onChange={this.handleChange} 
-                    placeholder="NOM PRENOM" 
+                    placeholder="NOM & PRENOM" 
                     required
                 />
                 <input 
-                    type="text" 
-                    name="society" 
-                    value={this.state.society} 
+                    type="text"
+                    name="user_society" 
+                    value={this.state.user_society} 
                     onChange={this.handleChange} 
                     placeholder="SOCIÉTÉ" 
                 />
                 <input 
                     type="email" 
-                    name="mail" 
-                    value={this.state.mail} 
+                    name="user_email" 
+                    value={this.state.user_email} 
                     onChange={this.handleChange} 
                     placeholder="EMAIL" 
                     required
                 />
                 <input 
                     type="tel" 
-                    name="phone" 
-                    value={this.state.phone} 
+                    name="user_phone" 
+                    value={this.state.user_phone} 
                     onChange={this.handleChange} 
                     placeholder="TÉLÉPHONE" 
                 />
