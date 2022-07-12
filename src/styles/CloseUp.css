@@ -23,3 +23,16 @@
     padding: 0.5% 5% 5% 5%;
     text-align: justify;
 }
+
+/*===============================SMALLSCREEN===============================*/
+@media all and (max-width: 1024px) {
+    /*---------------IMAGES----------------*/
+    .closeup-image {
+        height: 10em;
+    }
+} @media all and (max-width: 980px) {
+    /*---------------IMAGES----------------*/
+    .closeup-image {
+        height: 5em;
+    }
+}

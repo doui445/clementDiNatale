@@ -1,10 +1,10 @@
-/*================================FORM================================*/
+/*================================CONTACT================================*/
 #contact-container {
-    background-color: rgba(30, 30, 30, 1);
-    padding: 5%;
+    background-color: rgb(30, 30, 30);
 } #contact {
     display: flex;
     flex-direction: column;
+    padding: 5%;
 }
 /*---------------TEXT----------------*/
 .contact-title-description-container {
@@ -40,4 +40,11 @@
     border-color: white;
     border-width: 1px;
     width: 96%;
+}
+
+/*===============================SMALLSCREEN===============================*/
+@media all and (max-width: 1024px) {
+    .contact-formulaire input {
+        width: 95%;
+    }
 }
